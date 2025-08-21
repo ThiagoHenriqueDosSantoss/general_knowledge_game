@@ -31,6 +31,7 @@
 </template>
 
 <script>
+//Dentro do script, fica este bloco de código, para que outra parte use o componente criado
 export default {
   name: 'HelloWorld',
   props: {
