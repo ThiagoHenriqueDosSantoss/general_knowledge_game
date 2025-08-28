@@ -1,6 +1,6 @@
 <template>
   
- <template v-if="thi.question">
+ <template v-if="this.question">
     <h1 v-html="this.question"></h1>
     <template v-for="(a, index) in this.answers" :key="index">
     <input type="radio" name="options" value="answers" />
