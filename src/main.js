@@ -5,7 +5,7 @@ import App from './App.vue'
 
 createApp(App)
 .use(VueAxios, axios)
-.mount('#app')
+.mount('#app').created();
 
 
 
