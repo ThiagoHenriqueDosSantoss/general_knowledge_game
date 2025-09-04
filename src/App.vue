@@ -1,5 +1,11 @@
 <template>
-  <div class="App"><h5 class="acertos">{{ counterAccuracies }} - Acertos</h5> <h5 class="erros"> {{ counterErrors }} - Erros</h5></div>
+
+    <ScorerBoard
+      :counter-accuracies="this.counterAccuracies"
+      :counterErrors="this.counterErrors"/>
+
+  <div class="App"></div>
+
  <template v-if="this.question">
     <h1 v-html="this.question"></h1>
     <template v-for="(a, index) in this.answers" :key="index">
@@ -24,10 +30,15 @@
 </template>
 
 <script>
+import ScorerBoard from './components/ScorerBoard.vue';
+
 
 
 export default {
   name: 'App',
+  components:{
+    ScorerBoard
+  },
   data(){
     return {
       question: undefined,
